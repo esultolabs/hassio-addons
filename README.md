@@ -15,6 +15,6 @@ https://github.com/esultolabs/hassio-addons
 
 ## Add-ons provided by this repository
 
-### &#10003; [ZeroTier One for RPi0][addon-zerotier-one-rpi0]
+### &#10003; [CUPS server][addon-cups-server]
 
-Zerotier is an open source, cross-platform and easy to use virtual LAN / Hamachi alternative.
+CUPS (formerly an acronym for Common UNIX Printing System) is a modular printing system for Unix-like computer operating systems which allows a computer to act as a print server. A computer running CUPS is a host that can accept print jobs from client computers, process them, and send them to the appropriate printer.
