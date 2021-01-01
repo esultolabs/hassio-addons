@@ -1,0 +1,43 @@
+{
+  "name": "CUPS",
+  "version": "latest",
+  "slug": "cups",
+  "description": "CUPS addon. Image used is rpi-cups.",
+  "url": "https://hub.docker.com/r/grafana/grafana/",
+  "startup": "services",
+  "arch": [
+    "armhf"
+  ],
+  "machine": [
+    "raspberrypi"
+  ],
+  "boot": "auto",
+  "host_network": true,
+  "privileged": [
+    "NET_ADMIN",
+    "SYS_ADMIN"
+  ],
+  "devices": [
+    "/var/run/dbus:/var/run/dbus:rwm",
+    "/dev/bus/usb:/dev/bus/usb:rwm"
+  ],
+  "ports": {
+    "631/tcp": null
+  },
+  "ports_description": {
+    "631/tcp": "Web interface (Not required for Home Assistant Ingress)"
+  },
+  "options": {
+    "network_id":"",
+    "port": "631",
+    "auth_token": "",
+    "log_level": "info"
+  },
+  "schema": {
+    "network_id":"match([0-9a-z]{16})",
+    "port": "port",
+    "auth_token": "match([0-9A-Za-z]+)",
+    "log_level": "match(^(trace|debug|info|notice|warning|error|fatal)$)"
+  },
+  "image": "lemariva/rpi-cups"
+}
